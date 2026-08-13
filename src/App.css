@@ -1,0 +1,283 @@
+.app {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.app-header h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.role-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.role-switcher select {
+  padding: 4px 8px;
+}
+
+/* Grid */
+.grid-wrapper {
+  background: white;
+  border: 1px solid #e2e4e9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.grid-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e4e9;
+}
+
+.grid-toolbar input,
+.grid-toolbar select {
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.grid-toolbar .count {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.grid-header {
+  border-bottom: 2px solid #e2e4e9;
+  background: #fafbfc;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 110px 1.2fr 90px 110px 100px 100px 120px 100px 200px;
+  align-items: center;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.grid-row:not(.header-row):hover {
+  background: #f7f9ff;
+  cursor: pointer;
+}
+
+.grid-cell {
+  padding: 0 10px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-cell {
+  font-weight: 600;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.grid-body {
+  height: 520px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.row-actions button {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+}
+
+.row-actions button.danger {
+  color: #b91c1c;
+  border-color: #fca5a5;
+}
+
+/* Document workspace */
+.workspace-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 17, 21, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.workspace-panel {
+  background: white;
+  width: min(1000px, 92vw);
+  height: min(680px, 90vh);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e4e9;
+}
+
+.load-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.load-state.error {
+  color: #b91c1c;
+}
+
+.progress-bar {
+  width: 320px;
+  height: 8px;
+  background: #eef0f3;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4f6cf5;
+  transition: width 0.2s ease;
+}
+
+.workspace-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  overflow: hidden;
+}
+
+.doc-viewer {
+  padding: 16px;
+  border-right: 1px solid #e2e4e9;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+
+.doc-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.doc-actions button {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  font-size: 0.85rem;
+}
+
+.doc-actions button.danger {
+  color: #b91c1c;
+  border-color: #fca5a5;
+}
+
+.toast {
+  background: #eef2ff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.grid-toast {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.doc-select {
+  margin-left: 10px;
+  padding: 2px 6px;
+}
+
+.page-canvas {
+  height: 320px;
+  overflow-y: auto;
+  background: #f8f9fb;
+  border: 1px solid #e2e4e9;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+  color: #374151;
+}
+
+textarea.page-canvas.editable {
+  width: 100%;
+  resize: vertical;
+  border-color: #4f6cf5;
+}
+
+.comments-panel {
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.comments-panel li {
+  font-size: 0.82rem;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.comment-input {
+  display: flex;
+  gap: 6px;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
