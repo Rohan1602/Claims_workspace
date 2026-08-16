@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/claimsgrid.tsx","./src/documentworkspace.tsx","./src/roleswitcher.tsx","./src/api.ts","./src/main.tsx","./src/rbac.ts","./src/mocks/browser.ts","./src/mocks/claimsstore.ts","./src/mocks/documentsstore.ts","./src/mocks/handlers.ts"],"version":"5.9.3"}
